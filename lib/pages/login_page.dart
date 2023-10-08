@@ -5,7 +5,6 @@ import '../components/custom_button.dart';
 import '../components/custom_text_field.dart';
 import '../models/authen.dart';
 import 'forgot_password_page.dart';
-import 'home_page.dart';
 import 'register_page.dart';
 
 class LoginPage extends StatefulWidget {
@@ -36,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
     await Authen.loadData();
     if (Authen.isLogin == true) {
       Route route = MaterialPageRoute(
-        builder: (context) => const HomePage(title: 'Todo App',),
+        builder: (context) => const MainPage(),
       );
       // ignore: use_build_context_synchronously
       Navigator.push(context, route);
